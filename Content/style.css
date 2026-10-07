@@ -1,0 +1,254 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eaeded;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.nav-logo{
+    font-size 18px;
+}
+    .nav-logo h2 {
+        margin: 0;
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: 700;
+        color: white;
+    }
+
+.nav-search {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+    height: 40px;
+}
+
+.search-category {
+    background-color: #f3f3f3;
+    border: none;
+    padding: 0 10px;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #ccc;
+}
+
+.nav-search input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #febd69;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+}
+
+/* Cart Icon */
+.nav-cart {
+    display: flex;
+    align-items: flex-end;
+}
+
+.cart-icon-wrapper {
+    position: relative;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: #f08804;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cart-text {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* Thanh menu phụ (Sub-navbar) */
+.sub-navbar {
+    background-color: #232f3e; /* Màu nền xanh đậm đặc trưng */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    font-size: 14px;
+    overflow-x: auto; /* Cho phép cuộn ngang nếu màn hình nhỏ */
+}
+
+    .sub-navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        white-space: nowrap; /* Chống rớt dòng chữ */
+    }
+
+        /* Hiệu ứng khi di chuột vào (hover) */
+        .sub-navbar a:hover {
+            border: 1px solid white;
+        }
+
+/* Định dạng riêng cho chữ All có biểu tượng 3 gạch */
+.menu-all {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa icon và chữ */
+}
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+.cart-section {
+    background-color: white;
+    flex: 3;
+    padding: 20px;
+}
+
+.checkout-section {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Header giỏ hàng */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+    .cart-header h1 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+/* Sản phẩm */
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.item-image img {
+    width: 120px;
+    object-fit: contain;
+}
+
+.item-details {
+    flex: 1;
+    padding: 0 20px;
+}
+
+    .item-details h3 {
+        font-size: 18px;
+        color: #007185;
+        margin-bottom: 5px;
+    }
+
+    .item-details .author {
+        font-size: 14px;
+        color: #565959;
+        margin-bottom: 5px;
+    }
+
+    .item-details .stock {
+        color: #007600;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+/* Phần thao tác: Dropdown và Input tự nhập */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+    color: #007185;
+}
+
+.qty-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.qty-select, .qty-input {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #f0f2f2;
+    border: 1px solid #d5d9d9;
+    box-shadow: 0 2px 5px rgba(15,17,17,.15);
+    font-size: 14px;
+}
+
+.qty-input {
+    width: 60px;
+    outline: none;
+}
+
+.action-link {
+    cursor: pointer;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: bold;
+    width: 120px;
+    text-align: right;
+}
+
+.cart-footer {
+    text-align: right;
+    font-size: 18px;
+}
+
+/* Cột Checkout */
+.free-shipping-note {
+    font-size: 12px;
+    color: #007600;
+    margin-bottom: 15px;
+}
+
+.subtotal-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #ffd814;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}

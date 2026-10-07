@@ -1,0 +1,113 @@
+﻿@{
+    Layout = null;
+ }
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoanAnhKhoa_KtraFE</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-logo h2" <h2>amazon</h2>
+        </div>
+        <div class="nav-search">
+            <button class="search-category">All <i class="fas fa-caret-down"></i></button>
+            <input type="text" placeholder="Search Amazon">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-cart">
+            <div class="cart-icon-wrapper">
+                <i class="fas fa-shopping-cart fa-2x"></i>
+                <span id="cart-count">0</span> <!-- Tổng số lượng hiển thị trên giỏ hàng -->
+            </div>
+            <span class="cart-text">Cart</span>
+        </div>
+    </header>
+    <!-- Thanh menu phụ (Sub-navbar) -->
+    <nav class="sub-navbar">
+        <a href="#" class="menu-all"><i class="fas fa-bars"></i> All</a>
+        <a href="#">Prime Video</a>
+        <a href="#">Coupons</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Registry</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Sell</a>
+    </nav>
+    <main class="container">
+        <!-- Cột trái: Giỏ hàng -->
+        <div class="cart-section">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <span class="price-label">Price</span>
+            </div>
+            <!-- Sản phẩm 1 -->
+            <div class="cart-item">
+                <div class="item-image">
+                    <img src="~/Image/71YaYSVHCsL._AC_AA180_.jpg" alt="Book">
+                </div>
+                <div class="item-details">
+                    <h3>Modern API Design with gRPC: Efficient Solutions...</h3>
+                    <p class="author">by Hitesh Pattanayak</p>
+                    <p class="stock">In Stock</p>
+                    <div class="actions">
+                        <!-- Khu vực chọn số lượng -->
+                        <div class="qty-wrapper">
+                            <input type="number" class="qty-input" data-price="986396" min="1" value="1">
+                        </div>
+                        <span class="action-link">Delete</span>
+                        <span class="action-link">Save for later</span>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <strong class="price-display">986.396 ₫</strong>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="cart-item">
+                <div class="item-image">
+                    <img src="~/Image/51sYv0uQ8WL._AC_AA180_.jpg" alt="Book">
+                </div>
+                <div class="item-details">
+                    <h3>The AI Engineering Bible: The Complete and Up-to-Date...</h3>
+                    <p class="author">by Thomas R. Caldwell</p>
+                    <p class="stock">In Stock</p>
+                    <div class="actions">
+                        <div class="qty-wrapper">
+                            <input type="number" class="qty-input" data-price="966902" min="1" value="1">
+                        </div>
+                        <span class="action-link">Delete</span>
+                        <span class="action-link">Save for later</span>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <strong class="price-display">966.902 ₫</strong>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <p>Subtotal (<span id="bottom-subtotal-count">2</span> items): <strong id="bottom-subtotal-price">1.953.298 ₫</strong></p>
+            </div>
+        </div>
+
+        <!-- Cột phải: Thanh toán -->
+        <div class="checkout-section">
+            <div class="subtotal-box">
+                <p class="free-shipping-note"><i class="fas fa-check-circle"></i> Your order qualifies for FREE Shipping</p>
+                <p class="subtotal-text">Subtotal (<span id="subtotal-count">2</span> items): <strong id="subtotal-price">1.953.298 ₫</strong></p>
+                <button class="checkout-btn">Proceed to checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="~/Scripts/TinhTien.js"></script>
+</body>
+</html>
