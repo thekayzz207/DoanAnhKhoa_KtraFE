@@ -252,3 +252,90 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
+/* ========================================================= */
+/* Phần Gợi ý: New international customers purchased */
+/* ========================================================= */
+
+.recommendation-box {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px; /* Tạo khoảng cách 20px với hộp Checkout phía trên */
+}
+
+    .recommendation-box h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #0f1111;
+        line-height: 1.4;
+    }
+
+.rec-item {
+    display: flex;
+    margin-bottom: 25px;
+    gap: 15px; /* Khoảng cách giữa ảnh và chữ */
+}
+
+.rec-image img {
+    width: 80px;
+    object-fit: contain;
+}
+
+.rec-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Giãn cách các dòng chữ */
+}
+
+.rec-title {
+    color: #007185; /* Màu xanh link Amazon */
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Giới hạn hiển thị 2 dòng, quá thì hiện dấu ... */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+    .rec-title:hover {
+        text-decoration: underline;
+        color: #c45500; /* Đổi màu cam khi di chuột vào chữ */
+    }
+
+.rec-rating {
+    color: #ffa41c; /* Màu vàng ngôi sao */
+    font-size: 12px;
+}
+
+    .rec-rating span {
+        color: #007185; /* Màu số lượt đánh giá */
+        margin-left: 5px;
+    }
+
+        .rec-rating span:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+.rec-price {
+    color: #b12704; /* Màu đỏ đô đặc trưng cho giá sản phẩm gợi ý */
+    font-size: 14px;
+}
+
+/* Nút Add to cart nhỏ, bo cong giống Amazon */
+.add-to-cart-btn {
+    background-color: #ffd814;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px; /* Bo góc tròn nhiều hơn nút Checkout */
+    cursor: pointer;
+    font-size: 12px;
+    width: fit-content;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin-top: 5px;
+}
+
+    .add-to-cart-btn:hover {
+        background-color: #f7ca00;
+    }
